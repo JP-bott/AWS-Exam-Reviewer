@@ -11,6 +11,11 @@ app.get('/questions', (req, res) => {
   res.sendFile(path.join(__dirname, 'questions.json'));
 });
 
-app.listen(PORT, () => {
-  console.log(`Server listening on http://localhost:${PORT}`);
-});
+// Export the app for testing and only listen when run directly.
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Server listening on http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;
