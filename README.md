@@ -13,7 +13,6 @@ Getting started
 1. Install dependencies:
 
 ```powershell
-cd "c:\Users\ADMIN\Desktop\AWS\AWS-Exam-Reviewer"
 npm install
 ```
 
